@@ -12,6 +12,13 @@
       <ion-title size="large">Tab 3</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-content style="height:400px;">
+    <p>签名区域</p>
+    ----------------------------
+    <signature-pad [options]="signaturePadOptions" (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete()"></signature-pad>
+    ----------------------------------
+    <p>签名区域</p>
+  </ion-content>
   <ion-grid>
     <ion-row>
       <ion-col size="6" *ngFor="let photo of photoService.photos; index as position">
